@@ -8,6 +8,7 @@ public class ManageThings : MonoBehaviour
     public GameObject snitch;
     public GameObject gryf;
     public GameObject Slyth;
+    public ArrayList<GameObject> boids = new ArrayList<GameObject>;
 
     //control the number of players spawned for each team 
     public int numGryf;
