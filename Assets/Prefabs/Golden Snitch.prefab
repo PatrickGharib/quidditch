@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4501450657814670281}
   - component: {fileID: 4150662437013138024}
   - component: {fileID: 7757021847989756143}
+  - component: {fileID: -3154638495768103489}
+  - component: {fileID: -2098966569153108372}
   m_Layer: 0
   m_Name: Golden Snitch
   m_TagString: Untagged
@@ -56,6 +58,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -67,6 +70,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -104,3 +108,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d9a4f28fbb1cd4fb1deea3be5c5191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &-3154638495768103489
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544239809205880236}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &-2098966569153108372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544239809205880236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e01f4a3a0758d4aa2e44f70d7ac780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborhoodRadius: 10
+  force: 2
