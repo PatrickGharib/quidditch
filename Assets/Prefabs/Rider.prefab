@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8159430196716164652}
   - component: {fileID: 6222341535387300694}
   - component: {fileID: 2788488470035000369}
-  - component: {fileID: 5439741959098999751}
   - component: {fileID: 818393122769902444}
   - component: {fileID: -7845597647538820680}
-  - component: {fileID: -122056102351412921}
+  - component: {fileID: 8335526737969775384}
+  - component: {fileID: 498322569620642761}
   m_Layer: 0
   m_Name: Rider
   m_TagString: Gryffindor
@@ -83,19 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &5439741959098999751
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8508875528597355518}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &818393122769902444
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,7 +113,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &-122056102351412921
+--- !u!114 &8335526737969775384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,11 +122,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 8508875528597355518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 041bdcb814844504ebcf304cab0e3d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c95f3d13f7a90d4d879a5ba4cfd7ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snitch: {fileID: 214287380291715602, guid: 3266e56062132ce4ca243fcba4a835ca, type: 3}
-  neighborhoodRadius: 30
-  force: 0.1
-  ATTRACT: 1
-  REPEL: -0.5
+  velocity: {x: 0, y: 0, z: 0}
+  maxVelocity: 2
+--- !u!114 &498322569620642761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508875528597355518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1db57306117b14fb225f318734a393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
