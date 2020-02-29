@@ -9,19 +9,23 @@ public class Cohesion : MonoBehaviour
 {
     private Flyer flyer;
     public float radius;
+    [SerializeField]
+    private Vector3 midpointAverage;
     // Start is called before the first frame update
     void Start()
     {
         flyer = GetComponent<Flyer>();
+        Debug.Log(flyer.tag);
+        
     }
 
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         //get local neighbourhood
         Collider[] neighbours = Physics.OverlapSphere(transform.position, radius);
         //percieved local middle position of flyer
-        Vector3 midpointAverage = Vector3.zero;
+        midpointAverage = Vector3.zero;
         int numNeighbours = neighbours.Length;
 
         foreach(var neighbour in neighbours)
@@ -30,7 +34,7 @@ public class Cohesion : MonoBehaviour
             midpointAverage += distance;
         }
 
-        Debug.Log(flyer + ","+ numNeighbours);
+        //Debug.Log(flyer + ","+ numNeighbours);
         if (numNeighbours > 0)
         {
             midpointAverage = midpointAverage / numNeighbours;
