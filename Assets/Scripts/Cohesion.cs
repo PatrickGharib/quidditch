@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+
 [RequireComponent(typeof(MeshCollider))]
 [RequireComponent(typeof(Flyer))]
 public class Cohesion : MonoBehaviour
@@ -30,8 +30,11 @@ public class Cohesion : MonoBehaviour
 
         foreach(var neighbour in neighbours)
         {
-            var distance =  neighbour.transform.position - transform.position ;
-            midpointAverage += distance;
+            
+            if (neighbour.tag.Equals(tag)){
+                var distance = neighbour.transform.position - transform.position;
+                midpointAverage += distance;
+            }
         }
 
         //Debug.Log(flyer + ","+ numNeighbours);
