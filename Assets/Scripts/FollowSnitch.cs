@@ -2,22 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Flyer))]
 public class FollowSnitch : MonoBehaviour
 {
-    private Flyer wizard;
+  
+    private Rigidbody rb;
     public Transform snitch;
     public float chaseSpeed;
+    public float acceleration;
     // Start is called before the first frame update
     void Start()
     {
-       wizard = GetComponent<Flyer>();
+       
+       rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        var snitchDistance = snitch.position - transform.position;
-        wizard.velocity += snitchDistance * chaseSpeed; 
+        //look at snitch
+        transform.LookAt(snitch);
+        //add force in direction of snitch
+        rb.AddRelativeForce(Vector3.forward*acceleration);
+        //clamp the velocity of each flyer
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, chaseSpeed);
     }
 }
