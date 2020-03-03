@@ -7,6 +7,7 @@ public class AvoidOtherTeam : MonoBehaviour
     public float radius;
     public float avoidanceForce;
     private Rigidbody rb;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,12 @@ public class AvoidOtherTeam : MonoBehaviour
             if (!tag.Equals(neighbour.tag))
             {
                
-                dist = -(transform.position - neighbour.transform.position).normalized;
-                rb.AddForce(dist * avoidanceForce);
-             Debug.Log(dist);
+                dist += (transform.position - neighbour.transform.position).normalized;
+               
+             
             }
         }
+        dist = dist / neighbours.Length;
+        rb.AddForce(-dist * avoidanceForce);
     }
 }
