@@ -255,6 +255,18 @@ CapsuleCollider:
   m_Height: 1.0384674
   m_Direction: 2
   m_Center: {x: -0.009167194, y: -0.00000059604645, z: 0.005302429}
+--- !u!114 &131577092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131577089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &156150064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8508875528597355518, guid: 5f8ccfad7f08c4644ac9c16c55a7fc93,
@@ -273,6 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd22c2680fe545438ec7363444dc842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlytherinTackleProb: 25
+  GryffindorTackleProb: 15
 --- !u!114 &156150066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +315,18 @@ CapsuleCollider:
   m_Height: 1.0384674
   m_Direction: 2
   m_Center: {x: -0.009167194, y: -0.00000059604645, z: 0.005302429}
+--- !u!114 &156150068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156150064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &229573717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -433,6 +459,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 846840860}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &752097294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752097293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &752097295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd22c2680fe545438ec7363444dc842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlytherinTackleProb: 25
+  GryffindorTackleProb: 15
 --- !u!136 &752097298
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -768,6 +808,18 @@ CapsuleCollider:
   m_Height: 1.0384674
   m_Direction: 2
   m_Center: {x: -0.009167194, y: -0.00000059604645, z: 0.005302429}
+--- !u!114 &1093650135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093650132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1145571238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd22c2680fe545438ec7363444dc842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlytherinTackleProb: 25
+  GryffindorTackleProb: 15
 --- !u!114 &1461343372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,6 +1360,18 @@ CapsuleCollider:
   m_Height: 1.0384674
   m_Direction: 2
   m_Center: {x: -0.009167194, y: -0.00000059604645, z: 0.005302429}
+--- !u!114 &1461343374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461343370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1478970595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3544239809205880236, guid: 3266e56062132ce4ca243fcba4a835ca,
@@ -1373,6 +1439,18 @@ CapsuleCollider:
   m_Height: 1.0384674
   m_Direction: 2
   m_Center: {x: -0.009167194, y: -0.00000059604645, z: 0.005302429}
+--- !u!114 &1569007342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569007339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1609333154 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8508875528597355518, guid: 5f8ccfad7f08c4644ac9c16c55a7fc93,
@@ -1391,6 +1469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd22c2680fe545438ec7363444dc842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlytherinTackleProb: 25
+  GryffindorTackleProb: 15
 --- !u!114 &1609333156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,6 +1499,18 @@ CapsuleCollider:
   m_Height: 1.0384674
   m_Direction: 2
   m_Center: {x: -0.009167194, y: -0.00000059604645, z: 0.005302429}
+--- !u!114 &1609333158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609333154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1671952893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8508875528597355518, guid: 5f8ccfad7f08c4644ac9c16c55a7fc93,
@@ -1437,6 +1529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd22c2680fe545438ec7363444dc842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlytherinTackleProb: 25
+  GryffindorTackleProb: 15
 --- !u!114 &1671952895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,6 +1559,18 @@ CapsuleCollider:
   m_Height: 1.0384674
   m_Direction: 2
   m_Center: {x: -0.009167194, y: -0.00000059604645, z: 0.005302429}
+--- !u!114 &1671952897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671952893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1880930561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,6 +1940,18 @@ CapsuleCollider:
   m_Height: 1.0384674
   m_Direction: 2
   m_Center: {x: -0.009167194, y: -0.00000059604645, z: 0.005302429}
+--- !u!114 &2026935479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026935476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4d3e01aad3824ea7270853b8e1670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2031256155
 PrefabInstance:
   m_ObjectHideFlags: 0

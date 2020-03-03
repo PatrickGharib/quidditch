@@ -4,25 +4,56 @@ using UnityEngine;
 
 public class RespawnRider : MonoBehaviour
 {
-  
+    public int SlytherinTackleProb=25;
+    public int GryffindorTackleProb=15;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name.Equals("Floor")){
+            respawn();
+        }
+        //check to see if you tackle other team
+        if (!collision.gameObject.tag.Equals(tag))
+        {
 
-            
-            Rigidbody rb = GetComponent<Rigidbody>();
-            rb.velocity = Vector3.zero;
+            //calculate probability of tackling
             if (tag.Equals("Slytherin"))
             {
-                transform.position = new Vector3(0, 1, (float)22.5);
-                
+
+                //if tackled turn off snitch following so that inertia is maintained and apply gravity
+                if (Random.Range(0, 100) < SlytherinTackleProb)
+                {
+                    collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                    collision.gameObject.GetComponent<FollowSnitch>().enabled = false;
+                }
             }
-            if(tag.Equals("Gryffindor")) 
+            else
             {
-                transform.position = new Vector3(0, 1, -(float)22.5);
-                 
+                if (Random.Range(0, 100) < GryffindorTackleProb)
+                {
+                    collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                    collision.gameObject.GetComponent<FollowSnitch>().enabled = false;
+                }
             }
         }
+        
+        
     }
+  
+    private void respawn()
+    {
+        //respawn the rider on their side of the field and re-enable snitch following and disable gravity
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
+        if (tag.Equals("Slytherin"))
+        {
+            transform.position = new Vector3(0, 1, (float)22.5);
+        }
+        if (tag.Equals("Gryffindor"))
+        {
+            transform.position = new Vector3(0, 1, -(float)22.5);
 
+        }
+        rb.useGravity = false;
+        GetComponent<FollowSnitch>().enabled = true;
+    }
 }
