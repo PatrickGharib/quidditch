@@ -112,9 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6830709539d843448615b02a9d259a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snitch: {fileID: 214287380291715602, guid: 3266e56062132ce4ca243fcba4a835ca, type: 3}
-  chaseSpeed: 4.87
-  acceleration: 4.42
+  Snitch: {fileID: 0}
+  ChaseSpeed: 5
+  Acceleration: 3
 --- !u!114 &7486393890037202340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d52f8d1c33ff0748ad644d005c0a163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
-  avoidanceForce: 0
+  radius: 1
+  avoidanceForce: 2
 --- !u!136 &4996995955517926307
 CapsuleCollider:
   m_ObjectHideFlags: 0

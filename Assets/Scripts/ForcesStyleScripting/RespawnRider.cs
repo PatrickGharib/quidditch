@@ -17,18 +17,13 @@ public class RespawnRider : MonoBehaviour
         //check to see if you tackle other team
         //THIS IS BAD THIS SHOULD CHANGE TO LOOK BETTER 
         if (!collision.gameObject.tag.Equals(tag) && !floorCollision && !(collision.gameObject.tag.Equals("Snitch")))
-        {
-
-
-            
+        { 
             //calculate probability of tackling
             if (tag.Equals("Slytherin"))
-            {
-
+            { 
                 //if tackled turn off snitch following so that inertia is maintained and apply gravity
                 if (Random.Range(0, 100) < SlytherinTackleProb)
                 {
-                   
                     collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
                     collision.gameObject.GetComponent<FollowSnitch>().enabled = false;
                 }
@@ -42,8 +37,6 @@ public class RespawnRider : MonoBehaviour
                 }
             }
         }
-
-
     }
 
     private void respawn()
@@ -58,7 +51,6 @@ public class RespawnRider : MonoBehaviour
         if (tag.Equals("Gryffindor"))
         {
             transform.position = new Vector3(0, 1, -(float)22.5);
-
         }
         rb.useGravity = false;
         GetComponent<FollowSnitch>().enabled = true;

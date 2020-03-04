@@ -17,19 +17,16 @@ public class AvoidOtherTeam : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //get all the colliders in surrounding area(sphere)
         Collider[] neighbours = Physics.OverlapSphere(transform.position, radius);
         Vector3 dist = Vector3.zero;
         foreach(Collider neighbour in neighbours)
         {
-            if (!tag.Equals(neighbour.tag))
-            {
-               
-                dist += (transform.position - neighbour.transform.position).normalized;
-               
-             
-            }
+            //find where everyone is around you 
+            dist += (transform.position - neighbour.transform.position).normalized;
         }
         dist = dist / neighbours.Length;
-        rb.AddForce(-dist * avoidanceForce);
+        //avoid them, negative avoidance will make you seek out other players instead 
+        rb.AddForce(dist * avoidanceForce);
     }
 }
