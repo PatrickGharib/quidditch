@@ -2,19 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(FollowSnitch))]
+[RequireComponent(typeof(Rigidbody))]
 public class RespawnRider : MonoBehaviour
 {
-    public int SlytherinTackleProb=25;
-    public int GryffindorTackleProb=15;
+    public int SlytherinTackleProb = 25;
+    public int GryffindorTackleProb = 15;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name.Equals("Floor")){
+        var floorCollision = collision.gameObject.name.Equals("Floor");
+        if (floorCollision){
             respawn();
         }
         //check to see if you tackle other team
-        if (!collision.gameObject.tag.Equals(tag))
+        //THIS IS BAD THIS SHOULD CHANGE TO LOOK BETTER 
+        if (!collision.gameObject.tag.Equals(tag) && !floorCollision && !(collision.gameObject.tag.Equals("Snitch")))
         {
 
+
+            
             //calculate probability of tackling
             if (tag.Equals("Slytherin"))
             {
@@ -22,11 +28,12 @@ public class RespawnRider : MonoBehaviour
                 //if tackled turn off snitch following so that inertia is maintained and apply gravity
                 if (Random.Range(0, 100) < SlytherinTackleProb)
                 {
+                   
                     collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
                     collision.gameObject.GetComponent<FollowSnitch>().enabled = false;
                 }
             }
-            else
+            if (tag.Equals("Gryffindor"))
             {
                 if (Random.Range(0, 100) < GryffindorTackleProb)
                 {
@@ -35,10 +42,10 @@ public class RespawnRider : MonoBehaviour
                 }
             }
         }
-        
-        
+
+
     }
-  
+
     private void respawn()
     {
         //respawn the rider on their side of the field and re-enable snitch following and disable gravity

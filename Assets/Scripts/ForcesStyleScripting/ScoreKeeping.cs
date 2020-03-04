@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ScoreKeeping : MonoBehaviour
 {
-    public int slythScore { private set; get; } = 0;
-    public  int gryffScore { private set; get; } = 0;
+    public int SlythScore { private set; get; } = 0;
+    public  int GryffScore { private set; get; } = 0;
   
     //team == true then gryffScores, team == false then slythScores
     public  void IncrementScore(bool team)
     {
         //increment score
-        if (team) gryffScore++;
-        else slythScore++;
-        Debug.Log("Gryffindor: " + gryffScore + ", " + "Slytherin: " + slythScore);
+        if (team) GryffScore++;
+        else SlythScore++;
+        Debug.Log("Gryffindor: " + GryffScore + ", " + "Slytherin: " + SlythScore);
     }
 
 }

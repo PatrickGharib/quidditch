@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 2788488470035000369}
   - component: {fileID: 818393122769902444}
   - component: {fileID: 2545006097685133686}
-  - component: {fileID: 293583569554285275}
+  - component: {fileID: 7486393890037202340}
+  - component: {fileID: 5640671533218014693}
+  - component: {fileID: 4996995955517926307}
   m_Layer: 0
   m_Name: Rider
   m_TagString: Gryffindor
@@ -111,9 +113,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snitch: {fileID: 214287380291715602, guid: 3266e56062132ce4ca243fcba4a835ca, type: 3}
-  chaseSpeed: 0
-  acceleration: 0
---- !u!114 &293583569554285275
+  chaseSpeed: 4.87
+  acceleration: 4.42
+--- !u!114 &7486393890037202340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,3 +127,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd22c2680fe545438ec7363444dc842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlytherinTackleProb: 25
+  GryffindorTackleProb: 15
+--- !u!114 &5640671533218014693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508875528597355518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d52f8d1c33ff0748ad644d005c0a163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
+  avoidanceForce: 0
+--- !u!136 &4996995955517926307
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508875528597355518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5510966
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: -0.004396811, y: 0.07919423, z: 0}
