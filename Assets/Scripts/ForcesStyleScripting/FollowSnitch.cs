@@ -29,7 +29,9 @@ public class FollowSnitch : MonoBehaviour
         //add force in direction of snitch
         rb.AddForce(dist * Acceleration);
         //look at snitch
-        transform.rotation = Quaternion.LookRotation(rb.velocity);
-        
+        if (rb.velocity.magnitude != 0)
+        {
+            transform.rotation = Quaternion.LookRotation(rb.velocity);
+        }
     }
 }

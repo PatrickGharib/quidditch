@@ -16,7 +16,8 @@ public class RespawnRider : MonoBehaviour
         }
         //check to see if you tackle other team
         //THIS IS BAD THIS SHOULD CHANGE TO LOOK BETTER 
-        if (!collision.gameObject.tag.Equals(tag) && !floorCollision && !(collision.gameObject.tag.Equals("Snitch")))
+        if (!collision.gameObject.tag.Equals(tag) && !floorCollision 
+            && !(collision.gameObject.tag.Equals("Snitch")) && !(collision.gameObject.name.Equals("Bludger")))
         { 
             //calculate probability of tackling
             if (tag.Equals("Slytherin"))
@@ -38,7 +39,10 @@ public class RespawnRider : MonoBehaviour
             }
         }
     }
-
+    public void ExternalRespawn()
+    {
+        respawn();
+    }
     private void respawn()
     {
         //respawn the rider on their side of the field and re-enable snitch following and disable gravity
